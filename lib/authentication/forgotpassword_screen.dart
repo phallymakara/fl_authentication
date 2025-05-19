@@ -1,3 +1,4 @@
+import 'package:authentication/authentication/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class ForgotpasswordScreen extends StatelessWidget {
@@ -124,9 +125,24 @@ class ForgotpasswordScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 32),
-
-                    // Login Option
+                    const SizedBox(height: 12),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'login?',
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                      ),
+                    ), // Login Option
                   ],
                 ),
               ),
